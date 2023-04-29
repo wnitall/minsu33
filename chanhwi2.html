@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CHANHWI SHOP</title>
+  <title>CCC - HWI</title>
   <style>
     /* 스타일 시트 추가 */
     body {
@@ -126,7 +126,7 @@
 
 <body>
   <header>
-    <h1>CHANHWI SHOP</h1>
+    <h1>CCC - HWI</h1>
   </header>
   <nav>
     <ul>
@@ -139,40 +139,58 @@
 
 <section>
   <div class="item">
-    <img src="dress1.jpg" alt="dress1">
+    <img id="dress1" src="dress1.jpg" alt="dress1">
     <h2 class="item-title">Dress in denim(Black)</h2>
     <p class="item-color">Available Colors: White, Gray, Black</p>
-    <button class="btn">See Details</button>
-    <button class="buy-btn">Buy Now</button>
+    <button id="details1" class="btn">See Details</button>
+    <button id="buy1" class="buy-btn">Buy Now</button>
+    
   </div>
   
   <div class="item">
-    <img src="Low rise jean.jpg" alt="Low rise jean">
+    <img id = "jean1" src="Low rise jean.jpg" alt="Low rise jean">
     <h2 class="item-title">Low rise jean</h2>
     <p class="item-color">Available Colors: Blue, Black, Gray</p>
-    <button class="btn">See Details</button>
-    <button class="buy-btn">Buy Now</button>
+    <button id = "details2" class="btn">See Details</button>
+    <button id = "buy2" class="buy-btn">Buy Now</button>
   </div>
   
   <div class="item">
-    <img src="chain bags.jpg" alt="chain bags">
+    <img id = "bags1" src="chain bags.jpg" alt="chain bags">
     <h2 class="item-title">chain bags</h2>
     <p class="item-color">Available Colors: Red, Black, Gray</p>
-    <button class="btn">See Details</button>
-    <button class="buy-btn">Buy Now</button>
+    <button id = "details3" class="btn">See Details</button>
+    <button id = "buy3" class="buy-btn">Buy Now</button>
   </div>
 
   <div class="item">
-    <img src="muffler(clearance).jpg" alt="muffler(clearance)">
+    <img id = "muffler1" src="muffler(clearance).jpg" alt="muffler(clearance)">
     <h2 class="item-title">muffler(clearance)</h2>
     <p class="item-color">Available Colors: White, Gray, Black</p>
-    <button class="btn">See Details</button>
-    <button class="buy-btn">Buy Now</button>
+    <button id = "details4" class="btn">See Details</button>
+    <button id = "buy4" class="buy-btn">Buy Now</button>
   </div>
+
+  <div class="item">
+    <img id = "pants1" src="cargo pants(khaki).jpg" alt="cargo pants">
+    <h2 class="item-title">cargo pants</h2>
+    <p class="item-color">Available Colors: White, Gray, Black</p>
+    <button id = "details5" class="btn">See Details</button>
+    <button id = "buy5" class="buy-btn">Buy Now</button>
+  </div>
+
+  <div class="item">
+    <img id = "shirt1" src="wide T - shirt.jpg" alt="wide T - shirt">
+    <h2 class="item-title">wide T - shirt</h2>
+    <p class="item-color">Available Colors: White, Gray, Black</p>
+    <button id = "details6" class="btn">See Details</button>
+    <button id = "buy6" class="buy-btn">Buy Now</button>
+  </div>
+
 </section>
 
 <footer>
-  <p>&copy; 2023 CHANHWI SHOP</p>
+  <p>&copy; 2023 CCC-HWI</p>
 </footer>
 
 <script>
@@ -183,6 +201,58 @@
     itemLink.addEventListener('click', () => {
       window.location.href = 'buy.html';
     });
+  });
+  
+  // 사진 클릭 시 확대되도록
+  document.getElementById("details1").addEventListener("click", function() {
+    window.open("https://wnitall.github.io/minsu33/dress1.jpg");
+  });
+
+  document.getElementById("details2").addEventListener("click", function() {
+    window.open("https://wnitall.github.io/minsu33/Low%20rise%20jean.jpg");
+  });
+
+  document.getElementById("details3").addEventListener("click", function() {
+    window.open("https://wnitall.github.io/minsu33/chain%bags.jpg");
+  });
+
+  document.getElementById("details4").addEventListener("click", function() {
+    window.open("https://wnitall.github.io/minsu33/muffler(clearance).jpg");
+  });
+
+  document.getElementById("details5").addEventListener("click", function() {
+    window.open("https://wnitall.github.io/minsu33/cargo%pants(khaki).jpg");
+  });
+
+  document.getElementById("details6").addEventListener("click", function() {
+    window.open("https://wnitall.github.io/minsu33/wide%T%-%shirt.jpg");
+  });
+
+
+
+  // "buy now" 클릭 시 새 탭에서 Amazon 페이지 열기
+  document.getElementById("buy1").addEventListener("click", function() {
+    window.open("https://www.amazon.com");
+  });
+
+  document.getElementById("buy2").addEventListener("click", function() {
+    window.open("https://www.amazon.com");
+  });
+
+  document.getElementById("buy3").addEventListener("click", function() {
+    window.open("https://www.amazon.com");
+  });
+
+  document.getElementById("buy4").addEventListener("click", function() {
+    window.open("https://www.amazon.com");
+  });
+
+  document.getElementById("buy5").addEventListener("click", function() {
+    window.open("https://www.amazon.com");
+  });
+
+  document.getElementById("buy6").addEventListener("click", function() {
+    window.open("https://www.amazon.com");
   });
 </script>
 </body>
