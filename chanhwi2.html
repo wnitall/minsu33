@@ -8,33 +8,84 @@
   <style>
     /* 스타일 시트 추가 */
     body {
-      font-family: Arial, sans-serif;
+      font-family: Garamond;
       margin: 0;
       padding: 0;
       background-color: #f8f8f8;
     }
 
     header {
-      background-color: #242424;
-      color: #f8f8f8;
-      padding: 20px;
-    }
+        background-color: #ffffff;
+        color: #000000;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative; /* 새로 추가한 속성 */
+      }
 
-    h1 {
-      margin: 0;
-      text-align: center;
-    }
+      header h1 {
+        margin: 0;
+        font-size: 60px;
+      }
 
+      header p {
+        position: absolute; /* 새로 추가한 속성 */
+        left: 20px; /* 새로 추가한 속성 */
+        margin: 0;
+      }
+
+      header::before {
+        content: "";
+        display: inline-block;
+        width: 50%;
+        height: 0px;
+        background-color: #f8f8f8;
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+
+      header::after {
+        content: "";
+        display: inline-block;
+        width: 50%;
+        height: 0px;
+        background-color: #f8f8f8;
+        position: absolute;
+        top: 50%;
+        right: 0;
+      }
+
+      
     nav ul {
       list-style-type: none;
+      height: 5vh;
       margin: 0;
+      margin-top: 0;
       padding: 0;
       overflow: hidden;
-      background-color: #333;
+      background-color: #000000;
+      line-height: 1vh; /* 수정된 부분 */
+    }
+    nav p, nav li{
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      margin-right: 5px;
+      padding-top: 1px; /* 수정된 부분 */
     }
 
+    nav div {
+      text-align: center;
+    }
+    nav p {
+      float: left;  
+    }
     nav li {
-      float: left;
+      float: right;
     }
 
     nav li a {
@@ -108,7 +159,7 @@
     }
 
     .buy-btn {
-      background-color: #ff7200;
+      background-color: #0088ff;
       color: white;
       border: none;
       padding: 10px;
@@ -121,21 +172,98 @@
     .buy-btn:hover {
       background-color: #ff934d;
     }
+
+    .sidebar {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 74vh;
+    background-color: black;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+  }
+
+    .sidebar a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 40px;
+    font-weight: bold;
+    } 
+
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  .search-container {
+    position: absolute;
+    top: 20%;
+    right: 50px;
+    margin: 10px;
+  }
+
+  .search-container form {
+    display: flex;
+    margin: 0;
+  }
+
+  .search-container input[type=text] {
+    padding: 10px;
+    background: #ffffff;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    margin-right: 10px;
+    border: none;
+    font-size: 14px;
+  }
+
+  .search-container button {
+    padding: 10px;
+    background: #f0ecec;
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .search-container button:hover {
+    background: #000000;
+  }
+
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>CCC - HWI</h1>
-  </header>
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Shop</a></li>
-      <li><a href="#">About us</a></li>
-      <li><a href="#">Contact</a></li>
+      <p>People don't buy what we do, they buy why we do it.</p>
+      <li><a href="https://wnitall.github.io/minsu33/customer service.html">customer service</a></li>
+      <li><a href="https://wnitall.github.io/minsu33/orderdelivery.html">order delivery</a></li>
+      <li><a href="https://wnitall.github.io/minsu33/mypage.html">my page</a></li>
+      <li><a href="https://wnitall.github.io/minsu33/loginpage.html">login</a></li>
     </ul>
-</nav>
+  </nav>
+
+  <header>
+    <p>Man | Women</p>
+    <h1>CCC - HWI</h1>
+    <div class="search-container">
+      <form action="https://www.google.com/search">
+        <input type="text" name="q" placeholder="literaly anything!">
+        <button type="submit">search</button>
+      </form>
+    </div>    
+  </header>
+  
 
 <section>
   <div class="item">
@@ -187,6 +315,16 @@
     <button id = "buy6" class="buy-btn">Buy Now</button>
   </div>
 
+  <div class="sidebar">
+    <ul id="menu">
+      <li><a href="https://blog.naver.com/ldgnl88/223044004927">denim pants</a></li>
+      <li><a href="https://blog.naver.com/ldgnl88/223044004927">shoulder bag</a></li>
+      <li><a href="https://blog.naver.com/ldgnl88/223044004927">short-sleeved T-shirt</a></li>
+      <li><a href="https://blog.naver.com/ldgnl88/223044004927">cardigan</a></li>
+      <li><a href="https://blog.naver.com/ldgnl88/223044004927">muffler</a></li>
+    </ul>
+  </div>
+  
 </section>
 
 <footer>
@@ -202,7 +340,6 @@
       window.location.href = 'buy.html';
     });
   });
-  
   // 사진 클릭 시 확대되도록
   document.getElementById("details1").addEventListener("click", function() {
     window.open("https://wnitall.github.io/minsu33/dress1.jpg");
@@ -232,29 +369,38 @@
 
   // "buy now" 클릭 시 새 탭에서 Amazon 페이지 열기
   document.getElementById("buy1").addEventListener("click", function() {
-    window.open("https://www.amazon.com");
+    window.open("https://weseb.com/SJB/board.php?board=onscn&command=body&no=9141");
   });
 
   document.getElementById("buy2").addEventListener("click", function() {
-    window.open("https://www.amazon.com");
+    window.open("https://weseb.com/SJB/board.php?board=onscn&command=body&no=9141");
   });
 
   document.getElementById("buy3").addEventListener("click", function() {
-    window.open("https://www.amazon.com");
+    window.open("https://weseb.com/SJB/board.php?board=onscn&command=body&no=9141");
   });
 
   document.getElementById("buy4").addEventListener("click", function() {
-    window.open("https://www.amazon.com");
+    window.open("https://weseb.com/SJB/board.php?board=onscn&command=body&no=9141");
   });
 
   document.getElementById("buy5").addEventListener("click", function() {
-    window.open("https://www.amazon.com");
+    window.open("https://weseb.com/SJB/board.php?board=onscn&command=body&no=9141");
   });
 
   document.getElementById("buy6").addEventListener("click", function() {
-    window.open("https://www.amazon.com");
+    window.open("https://weseb.com/SJB/board.php?board=onscn&command=body&no=9141");
   });
+
+
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+  } 
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+
 </script>
 </body>
-
 </html>
