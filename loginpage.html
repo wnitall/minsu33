@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <style>
+        /* 스타일 코드 */
+        body {
+            background-color: #F5F5F5;
+        }
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #CCCCCC;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #008CBA;
+            color: #FFFFFF;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>로그인</h1>
+        <form id="login-form" onsubmit="return false;">
+            <label for="username">아이디</label>
+            <input type="text" id="username" name="username" placeholder="아이디를 입력하세요">
+            <label for="password">비밀번호</label>
+            <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요">
+            <input type="submit" value="로그인" onclick="login()">
+        </form>
+    </div>
+    <script>
+        /* JavaScript 코드 */
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                alert("아이디와 비밀번호를 입력하세요.");
+            } else {
+                // 아이디와 비밀번호를 서버로 전송하여 인증을 진행하는 로직
+
+                // 임시로 로그인 성공으로 가정
+                alert("로그인 성공!");
+                window.location.href = "https://wnitall.github.io/minsu33/chanhwi2.html"; // 이동할 URL 입력
+            }
+        }
+    </script>
+</body>
+</html>
