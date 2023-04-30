@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>주문 배송 조회</title>
+    <style>
+        /* 스타일 코드 */
+        body {
+            background-color: #F5F5F5;
+        }
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #CCCCCC;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #F5F5F5;
+            font-weight: bold;
+        }
+        .status {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .status h2 {
+            margin-bottom: 10px;
+        }
+        .status p {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .status .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #FFFFFF;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .status .btn:hover {
+            background-color: #0069D9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>주문 배송 조회</h1>
+        <table>
+            <caption>주문 정보</caption>
+            <thead>
+                <tr>
+                    <th>상품명</th>
+                    <th>가격</th>
+                    <th>수량</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>상품 A</td>
+                    <td>10,000원</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>상품 B</td>
+                    <td>20,000원</td>
+                    <td>2</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="status">
+            <h2>배송 상태</h2>
+            <p>배송 준비 중</p>
+            <a href="#" class="btn">환불/교환/사이즈 변경 요청</a>
+        </div>
+    </div>
+</body>
+</html>
